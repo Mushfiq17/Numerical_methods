@@ -1,0 +1,16 @@
+import math
+
+def calculate_Error(true_val, approx_val):
+    absolute_error=abs(true_val - approx_val)
+    relative_error= abs(absolute_error/true_val)
+    true_percent_relative_error= relative_error*100
+    return absolute_error,relative_error,true_percent_relative_error
+
+true_val=float(input("Enter true value : "))
+approx_val=float(input("Enter approx value : "))
+
+ae,re,tpre = calculate_Error(true_val, approx_val)
+
+print(f"Absolute error : {ae: .4f}")
+print(f"relative error : {re: .4f}")
+print(f"True percent relative error : {tpre: .4f}")
